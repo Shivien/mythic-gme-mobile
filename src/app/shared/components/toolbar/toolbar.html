@@ -1,1 +1,47 @@
-<p>toolbar works!</p>
+
+<mat-toolbar class="gap--3" color="primary">
+  <button matIconButton aria-label="Basculement du menu" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <h1 class="toolbar__title">Mythic GME Mobile</h1>
+
+  <div class="spacer"></div>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    [(opened)]="opened"
+    fixedInViewport="true"
+    fixedTopGap="0"
+    fixedBottomGap="0"
+    >
+    <mat-nav-list>
+
+      <mat-list-item (click)="sidenav.close()">
+        <div class="flex cross--center gap--3">
+          <mat-icon>arrow_back</mat-icon>
+          <span>Fermer</span>
+        </div>
+      </mat-list-item>
+
+      @for (link of links(); track $index)
+      {
+        <mat-list-item
+          class="link"
+          [routerLink]="link.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="sidenav.close()"
+          >
+          <div class="flex cross--center gap--3">
+            <mat-icon>{{ link.icon }}</mat-icon>
+            <span>{{ link.label }}</span>
+          </div>
+        </mat-list-item>
+      }
+
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>

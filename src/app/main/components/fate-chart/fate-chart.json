@@ -1,0 +1,118 @@
+{
+  "system": "Mythic Game Master Emulator 2nd Edition",
+  "chart": "Fate Chart",
+  "dice": "1d100",
+  "chaos_factor_range": [1, 9],
+  "odds": [
+    "Impossible",
+    "Nearly Impossible",
+    "Very Unlikely",
+    "Unlikely",
+    "50/50",
+    "Likely",
+    "Very Likely",
+    "Nearly Certain",
+    "Certain"
+  ],
+  "matrix": {
+    "Impossible": {
+      "1": { "exceptional_yes": 0, "yes": 0, "exceptional_no": 81 },
+      "2": { "exceptional_yes": 0, "yes": 0, "exceptional_no": 81 },
+      "3": { "exceptional_yes": 0, "yes": 0, "exceptional_no": 81 },
+      "4": { "exceptional_yes": 1, "yes": 5, "exceptional_no": 82 },
+      "5": { "exceptional_yes": 2, "yes": 10, "exceptional_no": 83 },
+      "6": { "exceptional_yes": 3, "yes": 15, "exceptional_no": 84 },
+      "7": { "exceptional_yes": 5, "yes": 25, "exceptional_no": 86 },
+      "8": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "9": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 }
+    },
+    "Nearly Impossible": {
+      "1": { "exceptional_yes": 0, "yes": 0, "exceptional_no": 81 },
+      "2": { "exceptional_yes": 1, "yes": 5, "exceptional_no": 82 },
+      "3": { "exceptional_yes": 2, "yes": 10, "exceptional_no": 83 },
+      "4": { "exceptional_yes": 3, "yes": 15, "exceptional_no": 84 },
+      "5": { "exceptional_yes": 5, "yes": 25, "exceptional_no": 86 },
+      "6": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "7": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "8": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "9": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 }
+    },
+    "Very Unlikely": {
+      "1": { "exceptional_yes": 1, "yes": 5, "exceptional_no": 82 },
+      "2": { "exceptional_yes": 2, "yes": 10, "exceptional_no": 83 },
+      "3": { "exceptional_yes": 3, "yes": 15, "exceptional_no": 84 },
+      "4": { "exceptional_yes": 5, "yes": 25, "exceptional_no": 86 },
+      "5": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "6": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "7": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "8": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "9": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 }
+    },
+    "Unlikely": {
+      "1": { "exceptional_yes": 2, "yes": 10, "exceptional_no": 83 },
+      "2": { "exceptional_yes": 3, "yes": 15, "exceptional_no": 84 },
+      "3": { "exceptional_yes": 5, "yes": 25, "exceptional_no": 86 },
+      "4": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "5": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "6": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "7": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "8": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 },
+      "9": { "exceptional_yes": 18, "yes": 90, "exceptional_no": 99 }
+    },
+    "50/50": {
+      "1": { "exceptional_yes": 3, "yes": 15, "exceptional_no": 84 },
+      "2": { "exceptional_yes": 5, "yes": 25, "exceptional_no": 86 },
+      "3": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "4": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "5": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "6": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "7": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 },
+      "8": { "exceptional_yes": 18, "yes": 90, "exceptional_no": 99 },
+      "9": { "exceptional_yes": 19, "yes": 95, "exceptional_no": 100 }
+    },
+    "Likely": {
+      "1": { "exceptional_yes": 5, "yes": 25, "exceptional_no": 86 },
+      "2": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "3": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "4": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "5": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "6": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 },
+      "7": { "exceptional_yes": 18, "yes": 90, "exceptional_no": 99 },
+      "8": { "exceptional_yes": 19, "yes": 95, "exceptional_no": 100 },
+      "9": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 }
+    },
+    "Very Likely": {
+      "1": { "exceptional_yes": 7, "yes": 35, "exceptional_no": 88 },
+      "2": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "3": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "4": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "5": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 },
+      "6": { "exceptional_yes": 18, "yes": 90, "exceptional_no": 99 },
+      "7": { "exceptional_yes": 19, "yes": 95, "exceptional_no": 100 },
+      "8": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 },
+      "9": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 }
+    },
+    "Nearly Certain": {
+      "1": { "exceptional_yes": 10, "yes": 50, "exceptional_no": 91 },
+      "2": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "3": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "4": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 },
+      "5": { "exceptional_yes": 18, "yes": 90, "exceptional_no": 99 },
+      "6": { "exceptional_yes": 19, "yes": 95, "exceptional_no": 100 },
+      "7": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 },
+      "8": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 },
+      "9": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 }
+    },
+    "Certain": {
+      "1": { "exceptional_yes": 13, "yes": 65, "exceptional_no": 94 },
+      "2": { "exceptional_yes": 15, "yes": 75, "exceptional_no": 96 },
+      "3": { "exceptional_yes": 17, "yes": 85, "exceptional_no": 98 },
+      "4": { "exceptional_yes": 18, "yes": 90, "exceptional_no": 99 },
+      "5": { "exceptional_yes": 19, "yes": 95, "exceptional_no": 100 },
+      "6": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 },
+      "7": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 },
+      "8": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 },
+      "9": { "exceptional_yes": 20, "yes": 99, "exceptional_no": 101 }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.sidenav-container {
+  position: absolute;
+  height: 100dvh;
+}
+
+.link.active::before {
+  background-color: var(--mat-sys-on-surface);
+  opacity: .12;
+}

@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './fate-chart.html',
   styleUrl: './fate-chart.scss',
 })
-export default class FateChart {}
+export default class FateChart {
+
+}
