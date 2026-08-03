@@ -1,0 +1,1 @@
+import{Ab as c,Ua as n,kb as o,lb as r}from"./chunk-WRUWZ6PK.js";var e=class a{static \u0275fac=function(t){return new(t||a)};static \u0275cmp=n({type:a,selectors:[["app-fate-chart"]],decls:2,vars:0,template:function(t,s){t&1&&(o(0,"p"),c(1,"fate-chart works!"),r())},encapsulation:2})};export{e as default};
