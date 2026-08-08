@@ -1,9 +1,16 @@
+.spacer {
+  flex-grow: 1;
+}
+
+.mdc-icon-button {
+  color: var(--mat-sys-on-primary);
+}
+
 .sidenav-container {
-  position: absolute;
-  height: 100dvh;
+  z-index: 9999;
 }
 
 .link.active::before {
-  background-color: var(--mat-sys-on-surface);
+  background-color: var(--mat-sys-primary);
   opacity: .12;
 }

@@ -4,6 +4,10 @@
 
 .flex {
   display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
 }
 
 .cross--center {

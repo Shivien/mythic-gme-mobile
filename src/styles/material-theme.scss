@@ -1,0 +1,29 @@
+@use "@angular/material" as mat;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$violet-palette,
+    typography: Roboto,
+    density: -2,
+  ));
+}
+
+mat-toolbar {
+  @include mat.toolbar-overrides((
+    container-background-color: var(--mat-sys-primary),
+    container-text-color: var(--mat-sys-on-primary),
+  ));
+}
+
+.accent {
+  @include mat.theme((
+    color: mat.$magenta-palette,
+  ));
+}
+
+.warn {
+  @include mat.theme((
+    color: mat.$red-palette,
+  ));
+}

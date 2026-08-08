@@ -1,12 +1,12 @@
 
 <mat-toolbar class="gap--3" color="primary">
-  <button matIconButton aria-label="Basculement du menu" (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-
   <h1 class="toolbar__title">Mythic GME Mobile</h1>
 
   <div class="spacer"></div>
+
+  <button matIconButton aria-label="Basculement du menu" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
@@ -17,21 +17,25 @@
     fixedTopGap="0"
     fixedBottomGap="0"
     >
-    <mat-nav-list>
 
+    <mat-nav-list>
       <mat-list-item (click)="sidenav.close()">
         <div class="flex cross--center gap--3">
           <mat-icon>arrow_back</mat-icon>
           <span>Fermer</span>
         </div>
       </mat-list-item>
+    </mat-nav-list>
 
+    <hr />
+
+    <mat-nav-list>
       @for (link of links(); track $index)
       {
         <mat-list-item
           class="link"
           [routerLink]="link.route"
-          routerLinkActive="active"
+          routerLinkActive="mdc-list-item--activated"
           [routerLinkActiveOptions]="{ exact: true }"
           (click)="sidenav.close()"
           >
@@ -41,7 +45,26 @@
           </div>
         </mat-list-item>
       }
-
     </mat-nav-list>
+
+    <hr />
+
+    <h2 class="title--2">Old School Essentials</h2>
+
+    <mat-nav-list>
+      <mat-list-item
+        class="link"
+        routerLink="/ose/xp-calculator"
+        routerLinkActive="mdc-list-item--activated"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="sidenav.close()"
+        >
+        <div class="flex cross--center gap--3">
+          <mat-icon>calculate</mat-icon>
+          <span>XP Calculator</span>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+
   </mat-sidenav>
 </mat-sidenav-container>

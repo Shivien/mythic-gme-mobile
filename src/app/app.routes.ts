@@ -12,6 +12,15 @@ export const routes: Routes = [
         loadComponent: () => import('./main/components/fate-chart/fate-chart'),
       },
       {
+        path: 'ose',
+        children: [
+          {
+            path: 'xp-calculator',
+            loadComponent: () => import('./ose/components/ose-xp-calculator/ose-xp-calculator'),
+          },
+        ],
+      },
+      {
         path: '',
         component: Home,
       },
