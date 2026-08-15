@@ -27,44 +27,32 @@
       </mat-list-item>
     </mat-nav-list>
 
-    <hr />
+    @for (section of sections; track $index)
+    {
+      <hr />
 
-    <mat-nav-list>
-      @for (link of links(); track $index)
-      {
-        <mat-list-item
-          class="link"
-          [routerLink]="link.route"
-          routerLinkActive="mdc-list-item--activated"
-          [routerLinkActiveOptions]="{ exact: true }"
-          (click)="sidenav.close()"
-          >
-          <div class="flex cross--center gap--3">
-            <mat-icon>{{ link.icon }}</mat-icon>
-            <span>{{ link.label }}</span>
-          </div>
-        </mat-list-item>
+      @if (section.name !== null) {
+        <h2 class="title--2">{{ section.name }}</h2>
       }
-    </mat-nav-list>
 
-    <hr />
-
-    <h2 class="title--2">Old School Essentials</h2>
-
-    <mat-nav-list>
-      <mat-list-item
-        class="link"
-        routerLink="/ose/xp-calculator"
-        routerLinkActive="mdc-list-item--activated"
-        [routerLinkActiveOptions]="{ exact: true }"
-        (click)="sidenav.close()"
-        >
-        <div class="flex cross--center gap--3">
-          <mat-icon>calculate</mat-icon>
-          <span>XP Calculator</span>
-        </div>
-      </mat-list-item>
-    </mat-nav-list>
+      <mat-nav-list>
+        @for (link of section.links; track $index)
+        {
+          <mat-list-item
+            class="link"
+            [routerLink]="link.route"
+            routerLinkActive="mdc-list-item--activated"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="sidenav.close()"
+            >
+            <div class="flex cross--center gap--3">
+              <mat-icon>{{ link.icon }}</mat-icon>
+              <span>{{ link.label }}</span>
+            </div>
+          </mat-list-item>
+        }
+      </mat-nav-list>
+    }
 
   </mat-sidenav>
 </mat-sidenav-container>

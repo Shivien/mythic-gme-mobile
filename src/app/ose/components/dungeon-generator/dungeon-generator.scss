@@ -1,0 +1,35 @@
+
+.datatable-container {
+  margin-block: 0;
+  margin-inline: var(--size-2);
+}
+
+table.datatable {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    border-bottom-color: var(--mat-table-row-item-outline-color, var(--mat-sys-outline, rgba(0, 0, 0, 0.12)));
+    border-bottom-width: var(--border-size-2);
+    border-bottom-style: solid;
+    font-weight: var(--font-weight-7);
+  }
+
+  th, td {
+    padding-block: var(--size-1);
+    padding-inline: var(--size-1);
+
+    &.center {
+      text-align: center;
+    }
+    &.justify {
+      text-align: justify;
+    }
+  }
+
+  tbody tr {
+    border-bottom-color: var(--mat-table-row-item-outline-color, var(--mat-sys-outline, rgba(0, 0, 0, 0.12)));
+    border-bottom-width: var(--border-size-1);
+    border-bottom-style: solid;
+  }
+}

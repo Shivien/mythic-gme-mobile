@@ -11,6 +11,10 @@ interface LinkModel {
   label: string;
   icon: string;
 }
+interface SectionModel {
+  name: string | null;
+  links: LinkModel[];
+}
 
 @Component({
   selector: 'app-toolbar',
@@ -29,8 +33,21 @@ interface LinkModel {
 export class Toolbar {
   protected readonly opened = signal<boolean>(false);
 
-  protected readonly links = signal<LinkModel[]>([
-    { route: '/', label: 'Accueil', icon: 'home' },
-    { route: '/fate-chart', label: 'Destin', icon: 'grid_on' },
-  ]);
+  protected readonly sections: SectionModel[] = [
+    {
+      name: null,
+      links: [
+        { route: '/', label: 'Accueil', icon: 'home' },
+        { route: '/fate-chart', label: 'Destin', icon: 'grid_on' },
+      ]
+    },
+    {
+      name: 'Old School Essentials',
+      links: [
+        { route: '/ose/xp-calculator', label: 'Calculateur d\'XP', icon: 'calculate' },
+        { route: '/ose/dungeon-generator', label: 'Générateur de donjon', icon: 'fort' },
+        { route: '/ose/character', label: 'Personnages', icon: 'person' },
+      ]
+    }
+  ];
 }

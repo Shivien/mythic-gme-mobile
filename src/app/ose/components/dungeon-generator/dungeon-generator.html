@@ -1,0 +1,31 @@
+<section class="flex--column pb--3">
+
+  <h1 class="title--1">Générateur de donjon</h1>
+
+  <article id="starting-area" class="flex--column">
+    <header>
+      <h2 class="title--2">Zone de départ</h2>
+    </header>
+
+    <div class="datatable-container">
+      <table class="datatable">
+        <thead>
+          <tr>
+            @for (cell of startingArea.headers; track $index) {
+            <th>{{ cell }}</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for (cells of startingArea.rows; track $index) {
+          <tr>
+            <td class="center">{{ cells[0] }}</td>
+            <td class="justify">{{ cells[1] }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</article>
+
+</section>
